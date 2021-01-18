@@ -1,0 +1,11 @@
+{
+  "name": "hyper63-adapter-minisearch",
+  "version": "0.0.1",
+  "description": "A hyper63 adapter for the search port",
+  "stable": true,
+  "files": [
+    "./README.md",
+    "./deps.js"
+  ],
+  "entry": "./mod.js"
+}
