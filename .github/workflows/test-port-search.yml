@@ -1,0 +1,22 @@
+name: test-port-search
+on: [push, pull_request]
+jobs:
+  build:
+    runs_on: ubuntu-latest
+    strategy:
+      matrix:
+        deno: [1.6.3]
+    name: Test with deno ${{ matrix.deno }}
+
+    steps:
+      - uses: actions/checkout@master
+      - uses: denolib/setup-deno@master
+        name: Setup Deno
+        with: 
+          deno-version: ${{ matrix.deno }}
+      - name: Print deno version
+        run: deno --version
+      - name: Check format
+        run: deno fmt --check packages/port-search/*.js
+      - name: Run Tests
+        run: deno test packages/port-search/mod_test.js

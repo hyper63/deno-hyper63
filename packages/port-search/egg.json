@@ -1,0 +1,11 @@
+{
+  "name": "hyper63-port-search",
+  "description": "hyper63 port for search adapters",
+  "version": "0.0.2",
+  "stable": true,
+  "files": [
+    "./README.md",
+    "./deps.js"
+  ],
+  "entry": "./mod.js"
+}
