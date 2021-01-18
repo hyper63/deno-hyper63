@@ -7,5 +7,9 @@
     "./README.md",
     "./deps.js"
   ],
-  "entry": "./mod.js"
+  "entry": "./mod.js",
+  "check": true,
+  "homepage": "",
+  "ignore": [],
+  "unlisted": false
 }

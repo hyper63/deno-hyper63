@@ -27,7 +27,7 @@ export const SearchPort = (adapter) => ({
     liftF(Search.UpdateDoc(index, id, doc)).foldMap(adapter, Task.of),
   deleteDoc: (index, id) =>
     liftF(Search.DeleteDoc(index, id)).foldMap(adapter, Task.of),
-  query: ({index, query}) =>
+  query: (index, query) =>
     liftF(
       Search.Query(index, query),
     ).foldMap(adapter, Task.of),
